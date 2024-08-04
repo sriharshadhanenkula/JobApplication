@@ -1,6 +1,5 @@
 package com.sriharsha.firstjobapp.job.Impl;
 
-
 import com.sriharsha.firstjobapp.job.Job;
 import com.sriharsha.firstjobapp.job.JobRepository;
 import com.sriharsha.firstjobapp.job.JobService;
@@ -16,7 +15,6 @@ public class JobServiceImpl implements JobService {
 
 //    private List<Job> jobs = new ArrayList<>();
     JobRepository jobRepository;
-
 
     public JobServiceImpl(JobRepository jobRepository) {
         this.jobRepository = jobRepository;
@@ -67,12 +65,9 @@ public class JobServiceImpl implements JobService {
                 job.setLocation(updatedJob.getLocation());
 
                 jobRepository.save(job);
-
                 return  true;
             }
-
         return false;
-
     }
 
 }
